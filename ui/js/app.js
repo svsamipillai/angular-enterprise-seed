@@ -23,35 +23,35 @@ myApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function (
     // $locationProvider.html5Mode(true);
 
     $routeProvider.when('/', {
-        templateUrl:'partials/home.html'
+        templateUrl: 'partials/home.html'
     });
 
     $routeProvider.when('/fs2', {
-        templateUrl:'partials/fs2/fs2.html',
+        templateUrl: 'partials/fs2/fs2.html',
         controller: 'FS2Controller'
     });
 
     $routeProvider.when('/contact', {
-        templateUrl:'partials/contact.html'
+        templateUrl: 'partials/contact.html'
     });
     $routeProvider.when('/about', {
-        templateUrl:'partials/about.html'
+        templateUrl: 'partials/about.html'
     });
     $routeProvider.when('/faq', {
-        templateUrl:'partials/faq.html'
+        templateUrl: 'partials/faq.html'
     });
 
     // note that to minimize playground impact on app.js, we
     // are including just this simple route with a parameterized 
     // partial value (see playground.js and playground.html)
     $routeProvider.when('/playground/:widgetName', {
-        templateUrl:'playground/playground.html',
-        controller:'PlaygroundCtrl'
+        templateUrl: 'playground/playground.html',
+        controller: 'PlaygroundCtrl'
     });
 
     // by default, redirect to site root
     $routeProvider.otherwise({
-        redirectTo:'/'
+        redirectTo: '/'
     });
 
 }]);
@@ -117,7 +117,7 @@ myApp.run(function ($rootScope, $location, $http, $timeout, AuthService, RESTSer
     $rootScope.faq = [
         {key: "What is Angular-Enterprise-Seed?", value: "A starting point for server-agnostic, REST based or static/mashup UI."},
         {key: "What are the pre-requisites for running the seed?", value: "Just an HTTP server.  Add your own backend."},
-        {key: "How do I change styling (css)?", value:  "Change Bootstrap LESS and rebuild with the build.sh script.  This will update the appropriate css/image/font files."}
+        {key: "How do I change styling (css)?", value: "Change Bootstrap LESS and rebuild with the build.sh script.  This will update the appropriate css/image/font files."}
     ];
 
 
